@@ -1,0 +1,370 @@
+/*reset*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/*main*/
+
+a {
+    text-decoration: none;
+    cursor: pointer !important;
+}
+
+ul li {
+    list-style: none;
+}
+
+html {
+    font-size: 62.5%;
+    -webkit-text-size-adjust: 100%;
+}
+
+img {
+    border: none;
+    vertical-align: middle;
+    max-width: 100%;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    line-height: 1.1;
+    color: #000;
+    padding: 5rem 2rem 2rem;
+    background: #FFF;
+    background-size: cover;
+}
+
+:focus {
+    outline: 0;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.red {
+    color: #bd0000;
+}
+
+.wrapper {
+    margin: 0 auto;
+    position: relative;
+    max-width: 1320px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.wrapper:after {
+    clear: both;
+    content: "";
+    display: block;
+}
+
+
+
+/* LEFT SIDE */
+
+.left {
+    float: right;
+    width: 38%;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.left .girl {
+    position: relative;
+}
+
+.left .girl:after {
+    content: '';
+    clear: both;
+}
+
+.left .girl .visible {
+    display: block;
+}
+
+.left .girl img {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    width: 100%;
+    border: 8px solid #fff;
+    opacity: 1;
+}
+
+
+
+/* END LEFT SIDE */
+
+
+/* RIGHT SIDE */
+
+.right {
+    float: left;
+    width: 100%;
+    margin-right: 2%;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 1.2rem;
+    overflow: hidden;
+    max-width: 720px;
+}
+
+.content {
+    text-align: center;
+}
+
+.content .header {
+    background: #3d589d;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 2.8rem;
+    text-align: center;
+    padding: 1.5rem 2rem;
+    color: #fff;
+    text-align: left;
+    font-weight: 700;
+}
+
+.content .rows {
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+}
+
+.content .row1 {
+    color: #3D589D;
+    font-size: 7.8rem;
+    margin-top: 2rem;
+}
+
+.content .row2 {
+    font-size: 4.8rem;
+}
+
+.content .row3 {
+    font-size: 1.8rem;
+}
+
+
+
+/* STEPS */
+
+.step-box {
+    margin: 2.5rem auto 0;
+}
+
+.step {
+    display: none;
+    padding: 0 2rem 2rem;
+}
+
+.step.visible,
+.loading-block .visible {
+    display: block;
+}
+
+.step .title {
+    margin-bottom: 2rem;
+    font-size: 3.1rem;
+}
+
+.step .title span {
+    color: #385a90;
+    padding-bottom: 1rem;
+}
+
+.btn-block {
+    text-align: center;
+}
+
+.step .next-btn {
+    display: inline-block;
+    padding: 0;
+    padding: 2.8rem 1.5rem;
+    border-radius: 100px;
+    color: #fff;
+    font-size: 4rem;
+    margin: 0 auto 1.5rem;
+    text-align: center;
+    width: 38%;
+    background: #3d589d;
+}
+
+.step .next-btn:hover {
+    background: linear-gradient(to bottom, #67AE55 0%, #578843 100%);
+}
+
+.next-btn.btn-no {
+    background: #a9aaac;
+    margin-left: 4%;
+}
+
+
+
+/*Final step*/
+
+.loading-block {
+    text-align: center;
+    padding: 2rem;
+}
+
+.loading-item {
+    display: none;
+}
+
+.loading-item {
+    padding-bottom: 1rem;
+}
+
+.loading-block img {
+    padding-bottom: 1.5rem;
+}
+
+.loading-block li {
+    display: none;
+    padding-left: 2.2rem;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.final-step {
+    color: #000;
+    font-size: 1.8rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: left;
+}
+
+.final-step .toshow {
+    display: none;
+}
+
+.final-step .title {
+    color: #385a90;
+    margin: 2rem auto;
+    text-transform: uppercase;
+    text-align: center;
+    width: 60%;
+    font-size: 2rem;
+}
+
+.final-step .text {
+    counter-reset: num;
+}
+
+.final-step .text li {
+    padding: 0 3rem 0 8rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.final-step .text li:before {
+    counter-increment: num;
+  content: counter(num);
+  position: absolute;
+  left: 2rem;
+  color: #fff;
+  background: #bd0000;
+  display: block;
+  font-size: 2.5rem;
+  width: 3rem;
+  text-align: center;
+  border-radius: 50%;
+  line-height: 1.2;
+  vertical-align: middle;
+  padding: 0.5rem 0.5rem;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: 3rem;
+}
+
+.info {
+    padding: 0.5rem 0 1.5rem;
+    color: #636363;
+    display: block;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.final-step .info {
+    font-size: 10px;
+}
+
+
+
+/* END STEPS */
+
+
+/* END RIGHT SIDE */
+
+@media (max-width:1200px) {
+    html {
+        font-size: 45%;
+    }
+}
+
+@media (max-width:700px) {
+    html {
+        font-size: 50%;
+    }
+    body {
+        padding: 0 2rem;
+    }
+    .left,
+    .right {
+        width: 100%;
+        margin: 0 auto 3rem;
+    }
+    .left .girl {
+        max-width: 320px;
+        min-height: 400px;
+        display: block;
+       margin: 70px auto 0;
+    }
+    .step-box .step .next-btn {
+        width: 46%;
+        margin-bottom: 2rem;
+    }
+    .content .header {
+        font-size: 1.8rem;
+          position: absolute;
+  top: 0;
+    }
+    .content .row1 {
+        font-size: 4.6rem;
+    }
+    .content .row2 {
+        font-size: 2.8rem;
+    }
+    .final-step .title {
+        width: 100%;
+    }
+    .final-step .next-btn {
+        width: 85%!important;
+    }
+}
+
+@media (max-width:360px) {
+    .left .girl {
+        min-height: 440px;
+    }
+}
